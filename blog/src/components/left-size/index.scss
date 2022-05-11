@@ -1,18 +1,26 @@
-.left_side{
-    width:360px;
+.left_side {
+    width: 360px;
     height: 100vh;
-    padding:70px;
+    padding: 70px;
     box-sizing: border-box;
     background-color: #f7f7f7;
-    .head{
-        font-size:14px;
-        color:#333;
-        img{
+
+    .head {
+        font-size: 14px;
+        color: #333;
+
+
+        img {
             display: block;
-            width:92px;
-            height:92px;
+            width: 92px;
+            height: 92px;
             object-fit: cover;
             border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
         }
     }
 }

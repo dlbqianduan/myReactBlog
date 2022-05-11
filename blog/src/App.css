@@ -1,1 +1,26 @@
-.App {}
+.app {
+   display: flex;   
+}
+
+.right_side{
+    position: relative;
+   flex:1;
+}
+
+.right_side .breadcrumb{
+    padding:20px 200px;
+    border-bottom: 1px solid #eee;
+}
+
+.right_side .route_views{
+    width:70%;
+    padding:60px 0 60px 200px;
+    box-sizing: border-box;
+}
+
+.right_side .quick_way{
+    width:20%;
+    position: absolute;
+    top:100px;
+    right:0;
+}

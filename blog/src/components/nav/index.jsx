@@ -10,6 +10,10 @@ export default class Nav extends Component {
                 path: '/home'
             },
             {
+                name: '分类',
+                path: '/categories'
+            },
+            {
                 name: '关于',
                 path: '/about'
             }
