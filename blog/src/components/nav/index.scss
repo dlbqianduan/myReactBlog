@@ -1,0 +1,13 @@
+.nav_wrap{
+    .link{
+        display: block;
+        padding:10px 0;
+        &.active{
+            color:#f40;
+        }
+        &:hover{
+            font-weight: bold;
+        }
+    }
+    
+}
