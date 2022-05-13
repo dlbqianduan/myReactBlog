@@ -8,11 +8,24 @@
     background-color: #fff;
 }
 
-.right_side .breadcrumb {
+.right_side .right_nav_side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
-    padding: 20px 200px;
+    padding: 16px 0 16px 200px;
     border-bottom: 1px solid #eee;
+    .search_wrap{
+        width:20vw;
+        input {
+            width: 250px;
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    }
 }
+
 
 .right_side .route_views {
     width: 65%;

@@ -1,53 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './index.scss';
+import { articleList as list } from "../../utils/articleList"
 
 function Home() {
     const navigate = useNavigate();
-    const list = [
-        {
-            id: 1,
-            title: 'Getting Started',
-            desc: '和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间',
-            time: '2022-05-10',
-            author: '前行的枫'
-        },
-        {
-            id: 2,
-            title: '哈哈哈哈',
-            desc: '和法律纠纷拉升阶段了房间',
-            time: '2022-05-10',
-            author: '前行的枫'
-        },
-        {
-            id: 3,
-            title: '哈哈哈哈',
-            desc: '和法律纠纷拉升阶段了房间',
-            time: '2022-05-10',
-            author: '前行的枫'
-        },
-        {
-            id: 4,
-            title: 'Getting Started',
-            desc: '和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间和法律纠纷拉升阶段了房间',
-            time: '2022-05-10',
-            author: '前行的枫'
-        },
-        {
-            id: 5,
-            title: '哈哈哈哈',
-            desc: '和法律纠纷拉升阶段了房间',
-            time: '2022-05-10',
-            author: '前行的枫'
-        },
-        {
-            id: 6,
-            title: '哈哈哈哈',
-            desc: '和法律纠纷拉升阶段了房间',
-            time: '2022-05-10',
-            author: '前行的枫'
-        }
-    ];
 
     return (
         <div className='home_wrap'>
@@ -55,7 +12,7 @@ function Home() {
                 return (
                     <div className='article_list' key={ele.id}>
                         <p className='title' onClick={() => navigate(`/home/detail`, { state: { id: ele.id } })}>{ele.title}</p>
-                        <div className='desc'>{ele.desc}</div>
+                        <div className='desc' onClick={() => navigate(`/home/detail`, { state: { id: ele.id } })}>{ele.desc}</div>
                         <p className='info'>
                             <svg t="1652323420860" className="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="16288" width="128" height="128"><path d="M512.384 953.86c-246.953 0-447.139-200.2-447.139-447.14 0-246.943 200.186-447.138 447.139-447.138 246.944 0 447.138 200.195 447.138 447.139 0 246.94-200.194 447.139-447.138 447.139z m0-843.607c-218.962 0-396.468 177.502-396.468 396.468 0 218.962 177.506 396.467 396.468 396.467S908.85 725.683 908.85 506.721 731.346 110.253 512.384 110.253z m229.041 508.58c-6.158 13.193-21.88 18.86-35.073 12.678l-210.116-70.244c-10.05-4.693-15.645-14.9-15.08-25.334-0.127-1.056-0.612-1.933-0.612-3.02V242.658c0-14.586 11.8-26.39 26.386-26.39 14.585 0 26.385 11.804 26.385 26.39v275.727l195.409 65.35c13.217 6.184 18.885 21.88 12.701 35.098z" p-id="16289" fill="#666666"></path></svg>
                             <span className='time'>{ele.time}</span>

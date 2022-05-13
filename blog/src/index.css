@@ -22,6 +22,10 @@ p {
   margin: 0;
 }
 
+input {
+  outline: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -33,9 +37,13 @@ blockquote {
 pre {
   white-space: pre-wrap;
   padding: 20px;
-  color: rgb(117, 101, 47);
-  /* color: #333; */
   border-radius: 3px;
-  background-color: #fafafa;
+  background-color: rgba(239, 245, 252, 0.144);
   border: 1px solid rgb(223, 217, 190);
+  /* border: 1px solid #eee; */
+  /* box-shadow: 0 2px 12px 0 rgb(0, 0, 0, 0.1); */
+}
+
+pre code {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

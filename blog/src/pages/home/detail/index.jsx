@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react'
 import './index.scss';
 import { useLocation, useNavigate } from 'react-router-dom'
 import { getDetails } from "../../../request/api/api"
+import { marked } from 'marked';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
 
 export default function Detail() {
     const location = useLocation()
@@ -12,8 +15,10 @@ export default function Detail() {
 
     useEffect(() => {
         getDetails({ id }).then(res => {
-            console.log(res)
-            setHtmlState(window.marked.parse(res, { highlight: (code) => { console.log(code) } }));
+            setHtmlState(marked.parse(res, {
+                langPrefix: 'language-javascript',
+                highlight: (code) => hljs.highlight(code, { language: 'javascript' }).value
+            }));
         });
     });
 
