@@ -17,6 +17,7 @@ export default class App extends Component {
 			console.log(value);
 		}
 	}
+
 	render() {
 		return (
 			<div className="app">
