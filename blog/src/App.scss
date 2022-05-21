@@ -1,45 +1,79 @@
 .app {
-    display: flex;
+	display: flex;
 }
 
 .right_side {
-    flex: 1;
-    padding-left: 360px;
-    background-color: #fff;
+	flex: 1;
+	padding-left: 360px;
+	background-color: #fff;
 }
 
 .right_side .right_nav_side {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 16px 0 16px 200px;
-    border-bottom: 1px solid #eee;
-    .search_wrap{
-        width:20vw;
-        input {
-            width: 250px;
-            padding: 6px 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-    }
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	padding: 16px 0 16px 200px;
+	border-bottom: 1px solid #eee;
+	.search_wrap {
+		position: relative;
+		width: 20vw;
+		input {
+			width: 250px;
+			padding: 6px 10px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+		}
+		.search_result_list {
+			position: absolute;
+			top: calc(100% + 2px);
+			left: 0;
+			width: 250px;
+			min-height: 27px;
+			padding: 6px 10px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			background-color: #fff;
+			z-index: 1;
+			transition: all 0.5s;
+			.search_result_item {
+				align-items: center;
+				color: #666;
+				padding: 3px 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				cursor: pointer;
+				&:hover {
+					color: #f40;
+				}
+				.icon {
+					position: relative;
+					top: -2px;
+					display: inline-block;
+					vertical-align: middle;
+					width: 16px;
+					height: 16px;
+					margin-right: 2px;
+				}
+			}
+		}
+	}
 }
 
-
 .right_side .route_views {
-    width: 65%;
-    padding: 30px 0 60px 200px;
-    box-sizing: border-box;
+	width: 65%;
+	padding: 30px 0 60px 200px;
+	box-sizing: border-box;
 }
 
 .right_side .quick_way {
-    width: 20%;
-    height: 100px;
-    padding: 0 20px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 100px;
-    right: 0;
-    border-left: 1px solid #eee;
+	width: 20%;
+	height: 100px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	position: fixed;
+	top: 100px;
+	right: 0;
+	border-left: 1px solid #eee;
 }
