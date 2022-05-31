@@ -6,6 +6,7 @@ import { getDetails } from "../../../request/api/api"
 import { marked } from 'marked';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
+import CopyBtn from '../../../components/copy-btn'
 
 export default function Detail() {
     const location = useLocation()
@@ -19,6 +20,11 @@ export default function Detail() {
                 langPrefix: 'language-javascript',
                 highlight: (code) => hljs.highlight(code, { language: 'javascript' }).value
             }));
+            // console.log(new CopyBtn().render())
+            // const preHtmlArr = document.getElementsByTagName('pre');
+            // preHtmlArr.forEach(ele => {
+
+            // })
         });
     });
 
